@@ -1,0 +1,7 @@
+package Cartes;
+
+public class Carte32 extends CarteClassique {
+
+
+
+}

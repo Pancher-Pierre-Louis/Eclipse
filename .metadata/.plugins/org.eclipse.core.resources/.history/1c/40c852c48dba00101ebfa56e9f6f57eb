@@ -1,0 +1,13 @@
+package Cartes;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		CarteClassique uneCarte = new Carte32(Valeur.AS, Couleur.PIQUE);
+		String m = uneCarte.getMotif();                 // "Classique"
+		int v = uneCarte.getValeur().getPuissance();    // 14
+
+	}
+	
+}	

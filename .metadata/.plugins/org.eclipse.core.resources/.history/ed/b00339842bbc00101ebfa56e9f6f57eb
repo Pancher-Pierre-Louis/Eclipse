@@ -1,0 +1,53 @@
+package jeuvie;
+
+public class Bestiole {
+    private final int numero;
+    private String couleur;
+    private static int compteur = 0;
+    public static final String VIVANTE= "verte";
+    public static final String MORTE = "rouge";
+    public static final String VIRTUELLE = "noire";
+    
+   
+
+    // constructeur pour (int, String)
+    
+    public Bestiole(String couleur) {
+    	this.numero = compteur;
+        this.couleur = couleur;
+        compteur ++;
+    }
+    
+    // Getters
+    public int getNumero() {
+    	return numero;
+    }
+    
+    public String getCouleur() {
+    	return couleur;
+    }
+    
+    
+    //Setters
+    public void setCouleur(String couleur) {
+    	this.couleur = couleur;
+    }
+    
+    // isAdulte ?
+    
+    public boolean isVivante() {
+    	return(this.couleur == VIVANTE);
+    }
+    
+
+    // méthode pour afficher la bestiole
+    @Override
+    public String toString() {
+    	if (isVivante()){
+            return "Bestiole #" + numero + " ( vivante )";
+    	}
+    	else {
+    		
+    	}
+    }
+}

@@ -1,0 +1,14 @@
+package Cartes;
+import java.util.ArrayList;
+
+public class Paquet32 {
+	ArrayList<Carte32> paquet = new ArrayList<>();
+	    // 🎬 Constructeur : crée automatiquement toutes les cartes du jeu
+	public Paquet32() {
+		for (Valeur valeur : Valeur.values()) {      // Parcourt toutes les valeurs possibles
+			for (Couleur couleur : Couleur.values()) { // Parcourt toutes les couleurs possibles
+				paquet.add(new Carte32(valeur, couleur)); // Crée la carte et l’ajoute au paquet
+			}
+		}
+	}
+}

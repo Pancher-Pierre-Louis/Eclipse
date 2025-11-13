@@ -1,0 +1,19 @@
+package ej;
+
+public class Bloc2 {
+   
+    private String description;
+    
+    public Bloc2(final String description) {
+        this.description = description;
+    }
+
+    public String getDescription() {
+        return this.description;
+    }
+    
+    public void setDescription(String description) {
+        this.description = description;
+    }
+    
+}

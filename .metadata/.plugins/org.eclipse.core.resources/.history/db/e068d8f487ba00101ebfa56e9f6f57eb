@@ -1,0 +1,6 @@
+package Cartes;
+
+public abstract class CarteClassique implements iCarte {
+	
+	
+}

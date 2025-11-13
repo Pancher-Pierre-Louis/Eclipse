@@ -1,0 +1,19 @@
+package Cartes;
+
+
+public class Cartes32{
+	enum valeur{
+		sept,huit,neuf,dix,V,D,R,As;
+	}
+	
+	enum atout{
+		pique,trefle,coeur,carreau;
+	}
+	
+	enum motif{
+		rond,triangle,carre;
+	}
+	
+	
+	
+}

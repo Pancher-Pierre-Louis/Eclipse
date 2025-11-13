@@ -1,0 +1,32 @@
+package Cartes;
+
+enum Valeur32{
+	sept,huit,neuf,dix,V,D,R,As;
+}
+
+enum Couleur{
+	pique,trefle,coeur,carreau;
+}
+
+public class Cartes32{
+	private Valeur32 valeur;
+	private Couleur couleur;
+	private String motif;
+	private boolean faceVisible;
+	
+	enum motif{
+		rond,triangle,carre;
+	}
+	
+	private boolean face;
+	
+}
+
+
+
+public class Main {
+	public static void main(Strings[] args) {
+
+	}
+
+}

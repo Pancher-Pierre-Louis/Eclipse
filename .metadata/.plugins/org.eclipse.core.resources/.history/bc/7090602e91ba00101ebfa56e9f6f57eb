@@ -1,0 +1,13 @@
+package Cartes;
+
+public class Carte32 extends CarteClassique {
+
+	public Carte32(Valeur valeur, Couleur couleur) {
+		private Valeur start = valeur.SEPT; 
+		super(valeur, couleur);	
+		
+	}
+
+
+
+}

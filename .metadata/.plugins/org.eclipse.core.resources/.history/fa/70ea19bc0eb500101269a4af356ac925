@@ -1,0 +1,16 @@
+package ej;
+
+public class Main2{
+	
+	public static void main(String[] args) {
+		Bloc unBloc = new Bloc("Voici mon premier bloc"); // Décralation et instanciation
+		unBloc.afficherDescription(); // Appel d'une méthode de l'objet
+		
+		Bloc unDeuxiemeBloc = new Bloc("Voici mon deuxième bloc");
+		unDeuxiemeBloc.afficherDescription();
+		
+		Bloc2 unTroisiemeBloc = new Bloc2("bloc 3 ici");
+		unTroisiemeBloc.afficherDescription();
+	}
+	
+}

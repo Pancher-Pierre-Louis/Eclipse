@@ -1,0 +1,66 @@
+package Cartes;
+import java.util.ArrayList;
+
+enum Valeur32{
+	sept,huit,neuf,dix,V,D,R,As;
+}
+
+enum Couleur{
+	pique,trefle,coeur,carreau;
+}
+
+class Cartes32{
+	private Valeur32 valeur;
+	private Couleur couleur;
+	private boolean atout;
+	private String motif;
+	private boolean faceVisible;
+	
+	public Cartes32(Valeur32 valeur,Couleur couleur) {
+        this.valeur = valeur;
+        this.couleur = couleur;
+        this.atout = false;
+        this.motif = "Classique";
+        this.faceVisible = false;
+	}
+
+	public Valeur32 getValeur() {
+		return valeur;
+	}
+	
+	public Couleur getCouleur() {
+		return couleur;
+	}
+	
+	public boolean isVisible() {
+		return faceVisible;
+	}
+	public void setFaceVisible(boolean faceVisible) {
+		this.faceVisible = faceVisible;
+	}
+		public void setMotif(String motif) {
+			this.motif = motif;
+		}
+}
+
+
+class Paquet{
+	public Paquet() {
+		ArrayList<String> paquet = new ArrayList<>();
+	
+		for (Couleur c: Couleur.values()) {
+			for (Valeur32 v: Valeur32.values()) {
+				paquet.add(v + "de" + c);
+			}
+		}
+	}
+}
+
+public class Main {
+	public static void main(String[] args) {
+		Paquet paquet = new Paquet();
+        System.out.println("Nombre de cartes : " + paquet.getCartes().size());
+        paquet.afficher();
+	}	
+
+}

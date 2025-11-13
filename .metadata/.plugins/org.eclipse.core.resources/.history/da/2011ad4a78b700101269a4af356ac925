@@ -1,0 +1,51 @@
+package Cartes;
+
+enum Valeur32{
+	sept,huit,neuf,dix,V,D,R,As;
+}
+
+enum Couleur{
+	pique,trefle,coeur,carreau;
+}
+
+public class Cartes32{
+	private Valeur32 valeur;
+	private Couleur couleur;
+	private boolean atout;
+	private String motif;
+	private boolean faceVisible;
+	
+	public Cartes32(Valeur32 valeur,Couleur couleur) {
+        this.valeur = valeur;
+        this.couleur = couleur;
+        this.atout = false;
+        this.motif = "Classique";
+        this.faceVisible = false;
+	}
+
+	public Valeur32 getValeur() {
+		return valeur;
+	}
+	
+	public Couleur getCouleur() {
+		return couleur;
+	}
+	
+	public boolean isVisible() {
+		return faceVisible = true;
+	}
+	public void setFaceVisible(boolean faceVisible) {
+		this.faceVisible = faceVisible;
+	}
+	public void setMotif(Strings motif) {
+		this.motif = motif;
+	}
+}
+
+
+public class Main {
+	public static void main(Strings[] args) {
+
+	}
+
+}

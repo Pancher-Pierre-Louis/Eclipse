@@ -1,0 +1,35 @@
+package Cartes;
+import java.util.ArrayList;
+
+
+enum Couleur33{
+	CARREAU, PIQUE, COEUR, TREFLE;
+}
+
+enum Valeur33{
+	SEPT(7),HUIT(8),NEUF(9),DIX(10),VALET(11),DAME(12),ROI(13),AS(14);
+}
+
+class Cartes33{
+	private Valeur33 valeur;
+	private Couleur33 couleur;
+	private boolean atout = false;
+	private String motif = "rond";
+	private boolean isVisible = false;
+	
+	public String getMotif() {
+		return motif;
+	}
+	public String setMotif(String motif) {
+		this.motif = motif;
+	}
+	
+	
+}
+
+
+
+
+public class Main2 {
+	
+}

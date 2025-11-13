@@ -1,0 +1,19 @@
+package jeuvie;
+
+public class Bestiole {
+    private int numero;
+    private String couleur;
+
+    // constructeur pour (int, String)
+    
+    public Bestiole(int numero, String couleur) {
+        this.numero = numero;
+        this.couleur = couleur;
+    }
+
+    // méthode pour afficher la bestiole
+    @Override
+    public String toString() {
+        return "Bestiole #" + numero + " (" + couleur + ")";
+    }
+}

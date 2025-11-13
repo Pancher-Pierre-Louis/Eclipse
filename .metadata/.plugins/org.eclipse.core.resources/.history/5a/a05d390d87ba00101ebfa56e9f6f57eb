@@ -1,0 +1,12 @@
+package Cartes;
+
+public interface ICarte {
+	
+    String getNom();   // chaque carte a un nom
+
+    boolean estSuperieure(ICarte autre);   
+
+    boolean isVisible();
+    void setVisible(boolean visible);
+
+}

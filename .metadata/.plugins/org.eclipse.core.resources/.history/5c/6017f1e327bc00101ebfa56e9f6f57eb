@@ -1,0 +1,18 @@
+package jeuvie;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Bestiole bestiole1 = new Bestiole ("verte");
+		Bestiole bestiole2 = new Bestiole ("rouge");
+		Bestiole bestiole3 = new Bestiole ("noire");
+		
+		System.out.println(bestiole1);
+		System.out.println(bestiole2);
+		System.out.println(bestiole3);
+		System.out.print(bestiole2.getCouleur());
+
+	}
+
+}

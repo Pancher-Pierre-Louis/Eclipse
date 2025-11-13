@@ -1,0 +1,25 @@
+package Cartes;
+
+public abstract class CarteClassique implements ICarte {
+	
+	
+	
+	
+	// --- Méthodes de l'interface ICarte ---
+    @Override
+    public boolean isVisible() {
+        return isVisible;
+    }
+
+    @Override
+    public void setVisible(boolean visible) {
+        this.isVisible = visible;
+    }
+
+    @Override
+    public String getNom() {
+        return valeur + " de " + couleur;
+    }
+
+	
+}

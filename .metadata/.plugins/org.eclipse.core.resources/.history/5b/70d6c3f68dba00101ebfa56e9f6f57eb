@@ -1,0 +1,118 @@
+package Cartes;  
+import java.util.ArrayList;  
+
+// 🎨 Énumération des couleurs possibles des cartes
+enum Couleur33 {
+    CARREAU, PIQUE, COEUR, TREFLE;
+    // Une enum est un type qui contient un ensemble fixe de constantes.
+    // Ici, on définit les 4 couleurs d’un jeu de cartes.
+}
+
+// 🎯 Énumération des valeurs possibles des cartes (7 à As)
+enum Valeur33 {
+    SEPT(7), HUIT(8), NEUF(9), DIX(10), VALET(11), DAME(12), ROI(13), AS(14);
+    // Chaque constante est associée à un nombre entre parenthèses : sa puissance.
+
+    private int puissance; // Champ pour stocker la valeur numérique (7, 8, 9, ...)
+
+    private Valeur33(int puissance) {
+        // Constructeur appelé automatiquement pour chaque valeur de l’enum
+        this.puissance = puissance;
+    }
+
+    public int getPuissance() {
+        // Getter : permet de récupérer la puissance d’une carte
+        return puissance;
+    }
+}
+
+// 🃏 Classe représentant une carte individuelle
+class Cartes33 {
+    private Valeur33 valeur;     // La valeur (As, Roi, Dame, etc.)
+    private Couleur33 couleur;   // La couleur (Pique, Coeur, etc.)
+    private boolean atout;       // Indique si la carte est un atout
+    private String motif = "rond"; // Le style du dos de la carte
+    private boolean isVisible;   // Si la carte est visible ou face cachée
+
+    // 🏗️ Constructeur : s'exécute à chaque création d'une carte
+    public Cartes33(Valeur33 valeur, Couleur33 couleur) {
+        this.valeur = valeur;      // Initialise la valeur (ex : As)
+        this.couleur = couleur;    // Initialise la couleur (ex : Pique)
+        this.atout = false;        // Par défaut, la carte n'est pas un atout
+        this.motif = "Classique";  // Motif par défaut
+        this.isVisible = false;    // Par défaut, la carte est face cachée
+    }
+
+    // --- Getters et Setters (accesseurs) ---
+
+    public String getMotif() {
+        return motif;
+    }
+
+    public void setMotif(String motif) {
+        this.motif = motif;
+    }
+
+    public boolean getAtout() {
+        return atout;
+    }
+
+    public boolean getIsVisible() {
+        return isVisible;
+    }
+
+    public Valeur33 getValeur() {
+        return valeur;
+    }
+
+    public Couleur33 getCouleur() {
+        return couleur;
+    }
+
+    // 🔁 Redéfinition de toString() : appelée automatiquement quand on affiche une carte
+    public String toString() {
+        return getValeur() + " de " + getCouleur()
+               + " (puissance " + getValeur().getPuissance() + ")";
+        // Exemple d’affichage : "AS de PIQUE (puissance 14)"
+    }
+}
+
+class Paquet33 {
+    ArrayList<Cartes33> paquet = new ArrayList<>();
+    // 🎬 Constructeur : crée automatiquement toutes les cartes du jeu
+    public Paquet33() {
+        for (Valeur33 valeur : Valeur33.values()) {      // Parcourt toutes les valeurs possibles
+            for (Couleur33 couleur : Couleur33.values()) { // Parcourt toutes les couleurs possibles
+                paquet.add(new Cartes33(valeur, couleur)); // Crée la carte et l’ajoute au paquet
+            }
+        }
+    }
+    // 🔍 Retourne une carte précise du paquet selon son index (0 = première carte)
+    public Cartes33 getCarte(int index) {
+        return paquet.get(index);
+    }
+}
+
+abstract class CarteClassique {
+	
+}
+
+
+
+public class Main2 {
+    public static void main(String[] args) {
+        Cartes33 uneCarte = new Cartes33(Valeur33.AS, Couleur33.PIQUE);
+        String m = uneCarte.getMotif();                 // "Classique"
+        int v = uneCarte.getValeur().getPuissance();    // 14
+
+        System.out.println(m); // Affiche "Classique"
+        System.out.println(v); // Affiche "14"
+
+        // Création d’un paquet complet de 32 cartes
+        Paquet33 nouveauPaquet = new Paquet33();
+
+        // Affiche la première carte du paquet (grâce à toString)
+        System.out.println(nouveauPaquet.getCarte(0));
+        // Exemple : "SEPT de CARREAU (puissance 7)"
+    }
+}
