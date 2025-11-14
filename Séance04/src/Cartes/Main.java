@@ -13,6 +13,7 @@ public class Main {
         
         Paquet32 nouveauPaquet = new Paquet32();
         System.out.println(nouveauPaquet.getCarte(0));
+        
 	}
 	
 }	

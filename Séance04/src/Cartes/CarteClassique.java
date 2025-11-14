@@ -56,7 +56,6 @@ public abstract class CarteClassique implements ICarte {
     public Couleur getCouleur() {
         return couleur;
     }
-
     // 🔁 Redéfinition de toString() : appelée automatiquement quand on affiche une carte
     public String toString() {
         return getValeur() + " de " + getCouleur()

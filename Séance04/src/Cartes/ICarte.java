@@ -7,5 +7,6 @@ public interface ICarte {
     boolean isVisible();
     
     void setVisible(boolean visible);
+    
 
 }
