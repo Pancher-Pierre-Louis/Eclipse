@@ -7,12 +7,20 @@ public class Main {
 		Carte32 uneCarte = new Carte32(Valeur.AS, Couleur.PIQUE);
 		String m = uneCarte.getMotif();   
 		String v = uneCarte.getFace();  // 
-        System.out.println(m); // 
-        System.out.println(v); // 
+
+        Paquet<Carte32> nouveauPaquet = Paquet.creerPaquet32();
+        Paquet<Carte32> nouveauPaquet2 = Paquet.creerPaquet32();
         
-        Paquet32 nouveauPaquet = new Paquet32();
-        System.out.println(nouveauPaquet.getCarte(15));
+        System.out.println(nouveauPaquet.getCarte(0).getFace());
+        System.out.println(nouveauPaquet2.getCarte(1).getFace());
         
+        nouveauPaquet.melanger();
+        
+        System.out.println(nouveauPaquet.getCarte(0).getFace());
+        System.out.println(nouveauPaquet2.getCarte(1).getFace());
+        
+        PlusOuMoins<Carte32> jeuPlusMoins = new PlusOuMoins<>(nouveauPaquet);
+        jeuPlusMoins.jouer();
 	}
 	
 }	
