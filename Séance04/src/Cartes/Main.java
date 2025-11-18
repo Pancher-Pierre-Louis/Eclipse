@@ -11,7 +11,7 @@ public class Main {
         System.out.println(m); // Affiche "Classique"
         System.out.println(v); // Affiche "14"
         
-        Paquet32 nouveauPaquet = new Paquet32();
+        Paquet323 nouveauPaquet = new Paquet323();
         System.out.println(nouveauPaquet.getCarte(0));
         
 	}

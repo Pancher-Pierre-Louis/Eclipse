@@ -5,7 +5,7 @@ public class Carte52 extends CarteClassique {
 	private final Valeur valeur;
     private final Couleur couleur;
 
-    public Carte52(Valeur valeur, Couleur couleur) {
+    public Carte52(Valeur valeur, Couleur couleur) { // Constructeur
         super("****");
         this.valeur = valeur;
         this.couleur = couleur;
@@ -23,10 +23,11 @@ public class Carte52 extends CarteClassique {
 
         return rep;
     }
-
-    @Override
-    protected String getFace() {
-        return "[" + this.valeur.toString() + " " + this.couleur.toString() + "]";
-    }
+    
+	@Override
+	protected String getFace() {
+		return "[" + valeur + " de " + couleur + "]"; // on redéfinit le getFace() de CarteClassique
+		
+	}
 
 }

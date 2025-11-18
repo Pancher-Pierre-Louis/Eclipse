@@ -1,12 +1,12 @@
 package Cartes;
 import java.util.ArrayList;
 
-public class Paquet32 {
+public class Paquet323 {
 	ArrayList<Carte32> paquet = new ArrayList<>();
 	private final int start = Valeur.SEPT.ordinal();
 	
 	    // 🎬 Constructeur : crée automatiquement toutes les cartes du jeu
-	public Paquet32() {
+	public Paquet323() {
 		for (int i = start; i < Valeur.values().length; i++) {
 	        Valeur valeur = Valeur.values()[i];      // Parcourt toutes les valeurs possibles
 			for (Couleur couleur : Couleur.values()) { // Parcourt toutes les couleurs possibles

@@ -5,18 +5,17 @@ public abstract class CarteClassique implements ICarte {
 	protected boolean isVisible = false;   
 	protected abstract String getFace();
 
-    // 🏗️ Constructeur : s'exécute à chaque création d'une carte
-    public CarteClassique(String motif) {       
+    public CarteClassique(String motif) { // Constructeur
         this.motif = motif;  
         this.isVisible = false;    
     }
-	// --- Méthodes de l'interface ICarte ---
+	// --- Méthode de l'interface ICarte ---
     @Override
 	public void tourner() {
 		isVisible = ! isVisible;
 	}	
     
-    // --- Getters et Setters (accesseurs) ---
+    // --- Getters et Setters  ---
     public String getMotif() {
         return motif;
     }
@@ -30,7 +29,7 @@ public abstract class CarteClassique implements ICarte {
     }
 
 	@Override
-	public String toString() {
+	public String toString() { // Si la carte est visible on renvoie sa couleur et sa valeur, à définir dans les classes filles)
 		String rep;
 		if (!isVisible) {
 			rep=motif;

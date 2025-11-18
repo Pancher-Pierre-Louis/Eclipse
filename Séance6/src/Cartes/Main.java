@@ -8,19 +8,13 @@ public class Main {
 		String m = uneCarte.getMotif();   
 		String v = uneCarte.getFace();  // 
 
-        Paquet<Carte32> nouveauPaquet = Paquet.creerPaquet32();
-        Paquet<Carte32> nouveauPaquet2 = Paquet.creerPaquet32();
-        
-        System.out.println(nouveauPaquet.getCarte(0).getFace());
-        System.out.println(nouveauPaquet2.getCarte(1).getFace());
-        
-        nouveauPaquet.melanger();
-        
-        System.out.println(nouveauPaquet.getCarte(0).getFace());
-        System.out.println(nouveauPaquet2.getCarte(1).getFace());
-        
-        PlusOuMoins<Carte32> jeuPlusMoins = new PlusOuMoins<>(nouveauPaquet);
-        jeuPlusMoins.jouer();
-	}
-	
+       Paquet32 p = Paquet32.getInstance();
+       p.shuffle();
+       
+       String maCarte = p.get(0).getFace();
+       System.out.println(maCarte);
+       
+       PlusOuMoins<Carte32> jeuPlusMoins = new PlusOuMoins<>(p);
+       jeuPlusMoins.jouer();
+        }
 }	
