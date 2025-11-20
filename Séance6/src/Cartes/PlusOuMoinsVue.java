@@ -12,7 +12,7 @@ public class PlusOuMoinsVue <T extends CarteClassique> {
     
     public void afficherResultat(boolean ok) {
     	if (ok) {
-    		System.out.println("Bravo tu gagnes 1 points ! " );
+    		System.out.println("Bravo tu gagnes 1 point ! " );
     	}
     	else {
     		System.out.println("Raté... ");

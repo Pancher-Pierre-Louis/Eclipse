@@ -5,9 +5,9 @@ public class PlusOuMoinsControleur <T extends CarteClassique> {
 	private PlusOuMoinsVue<T> vue;
 	private PlusOuMoinsModele<T> modele;
 	
-	public PlusOuMoinsControleur(PlusOuMoinsModele<T> modele,PlusOuMoinsVue<T> vue) {
-		this.modele = modele;
-		this.vue = vue;
+	public PlusOuMoinsControleur(Paquet<T> paquet) {
+        this.modele = new PlusOuMoinsModele<>(paquet);
+        this.vue = new PlusOuMoinsVue<>();
 	}
 
 	public void jouer() {
@@ -17,7 +17,6 @@ public class PlusOuMoinsControleur <T extends CarteClassique> {
 			String choix = vue.demanderChoix();
 			
 			boolean resultat = modele.verifierChoix(choix);
-		
 			
 			vue.afficherResultat(resultat);
 			
@@ -26,12 +25,7 @@ public class PlusOuMoinsControleur <T extends CarteClassique> {
 	}
 
 	public static void main(String[] args) {
-	       Paquet32 p = Paquet32.getInstance();
-	       
-	       PlusOuMoinsModele<Carte32> modele = new PlusOuMoinsModele<>(p);
-	       PlusOuMoinsVue<Carte32> vue = new PlusOuMoinsVue<Carte32>();
-	       
-	       PlusOuMoinsControleur<Carte32> controleur = new PlusOuMoinsControleur<Carte32>(modele,vue);
-	       controleur.jouer();
+		Paquet32 p = Paquet32.getInstance();
+		new PlusOuMoinsControleur<Carte32>(p).jouer();
 	}
 }
