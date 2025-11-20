@@ -1,6 +1,5 @@
 package Cartes;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 
 public abstract class Paquet<T extends CarteClassique> {
@@ -11,9 +10,9 @@ public abstract class Paquet<T extends CarteClassique> {
 
 	public Paquet() {
 		super();
-		creerPaquet();
+		this.creerPaquet();
 		this.shuffle();
-	};
+	}
 	
 	public int size() {
 		return cartes.size();

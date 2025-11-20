@@ -20,7 +20,7 @@ public class Paquet32 extends Paquet<Carte32>{
         	for (Valeur valeur : Valeur.values()) {
         		if (valeur.getPuissance() >= Valeur.SEPT.getPuissance()) { 
         			for (Couleur couleur : Couleur.values()) { 
-        				cartes.add(new Carte32(valeur, couleur)); 
+        				super.cartes.add(new Carte32(valeur, couleur)); 
         			}
         		}
         	}

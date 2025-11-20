@@ -1,21 +1,32 @@
 package Cartes;
+import java.util.Scanner;
+
 
 public class PlusOuMoinsVue <T extends CarteClassique> {
 	
-	public void afficherWinPlus(T carteCourante, T carteSuivante) {
-		System.out.println("Carte acutelle: " + carteCourante.getFace() + "supérieur à " + carteSuivante.getFace());;;
-		System.out.println("Bravo 1 point pour toi");
-	}
+	private final Scanner sc = new Scanner(System.in);
 	
-	public void afficherWinMoins(T carteCourante, T carteSuivante) {
-		System.out.println("Carte acutelle: " + carteCourante.getFace() + "inférieure à " + carteSuivante.getFace());;;
-		System.out.println("Bravo 1 point pour toi");
-	}
-	
-	public void afficherLose(T carteCourante, T carteSuivante) {
-		System.out.println("Carte acutelle: " + carteCourante.getFace() + " contre " + carteSuivante.getFace());;;
-		System.out.println("Perdu, mais continue");
-	}
-	
-
+    public void afficherCarte(T carte) {
+    	System.out.println("Carte actuelle" + carte.getFace());
+    }
+    
+    public void afficherResultat(boolean ok) {
+    	if (ok) {
+    		System.out.println("Bravo tu gagnes 1 points ! " );
+    	}
+    	else {
+    		System.out.println("Raté... ");
+    	}
+    	
+    }
+    
+    public void afficherScore(int score) {
+    	System.out.println("Ton score: " + score);
+    }
+    
+    public String demanderChoix() {
+    	System.out.println("Plus ou Moins ?");
+    	return sc.nextLine();
+    }
+    
 }
