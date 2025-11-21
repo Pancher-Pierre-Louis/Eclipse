@@ -1,20 +1,22 @@
 package Cartes;
 
 public abstract class CarteClassique implements ICarte {
-	protected String motif; 
 	protected boolean isVisible = false;   
 	protected abstract String getFace();
 	protected final Valeur valeur;
     protected final Couleur couleur;
+    protected String motif = "****";
 
     public CarteClassique(Valeur valeur, Couleur couleur) { // Constructeur
     	this.valeur = valeur;  
-        this.couleur = couleur;    
+        this.couleur = couleur;  
     }
+    
 	// --- Méthode de l'interface ICarte ---
+    
     @Override
 	public void tourner() {
-		isVisible = ! isVisible;
+		isVisible = !isVisible;
 	}	
     
 
@@ -38,10 +40,6 @@ public abstract class CarteClassique implements ICarte {
     
     public void setMotif(String motif) {
         this.motif = motif;
-    }
-
-    public boolean getIsVisible() {
-        return isVisible;
     }
     
 	@Override

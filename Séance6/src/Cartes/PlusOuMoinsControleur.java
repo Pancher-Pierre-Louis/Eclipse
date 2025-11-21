@@ -2,15 +2,15 @@ package Cartes;
 
 public class PlusOuMoinsControleur <T extends CarteClassique> {
 
-	private PlusOuMoinsVue<T> vue;
+	private PlusOuMoinsVue<T> vue; 
 	private PlusOuMoinsModele<T> modele;
 	
-	public PlusOuMoinsControleur(Paquet<T> paquet) {
+	public PlusOuMoinsControleur(Paquet<T> paquet) { // Controleur
         this.modele = new PlusOuMoinsModele<>(paquet);
         this.vue = new PlusOuMoinsVue<>();
 	}
 
-	public void jouer() {
+	public void jouer() { // Méthode de jeu
 		while(!modele.estFini()) {
 			vue.afficherCarte(modele.getCarteCourante());
 			
@@ -24,7 +24,7 @@ public class PlusOuMoinsControleur <T extends CarteClassique> {
 		}
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args) { // Main 
 		Paquet32 p = Paquet32.getInstance();
 		new PlusOuMoinsControleur<Carte32>(p).jouer();
 	}
